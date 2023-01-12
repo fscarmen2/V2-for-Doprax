@@ -11,7 +11,7 @@ sed -i "s#RELEASE_RANDOMNESS#${RELEASE_RANDOMNESS}#g" /etc/supervisor/conf.d/sup
 
 # 伪装 v2ray 执行文件
 RELEASE_RANDOMNESS=$(tr -dc 'A-Za-z0-9' </dev/urandom | head -c 6)
-mv v2ray ${RELEASE_RANDOMNESS}
+mv v ${RELEASE_RANDOMNESS}
 cat config.json | base64 > config
 rm -f config.json
 
